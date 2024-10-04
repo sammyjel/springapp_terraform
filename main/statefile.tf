@@ -1,8 +1,8 @@
 terraform {
   backend "s3" {
-    bucket  = "vegeta-terraform-remote-state"
+    bucket  = "github-terraform-bucket"
     key     = "infra.tfstate"
-    region  = "eu-west-2"
+    region  = "ap-south-1"
     profile = "default"
     dynamodb_table = "vegeta-terraform-remote-state-table"
   }

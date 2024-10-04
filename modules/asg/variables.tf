@@ -6,3 +6,4 @@ variable "alb_security_group_id" {}
 variable "iam_ec2_instance_profile" {}
 variable "project_name" {}
 variable "rds_db_endpoint" {}
+variable "region" {}
