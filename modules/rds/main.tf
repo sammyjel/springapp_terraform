@@ -1,5 +1,4 @@
-# use data source to get all avalablility zones in region
-data "aws_availability_zones" "available_zones" {}
+ata "aws_availability_zones" "available_zones" {}
 
 # create security group for the database
 resource "aws_security_group" "database_security_group" {
@@ -43,12 +42,12 @@ resource "aws_db_subnet_group" "database_subnet_group" {
 # create the rds instance
 resource "aws_db_instance" "db_instance" {
   engine                  = "mysql"
-  engine_version          = "8.0.35"
+  engine_version          = "8.0.31"
   multi_az                = false
   identifier              = "petclinic"
   username                = "petclinic"
   password                = "petclinic"
-  instance_class          = "db.t3.micro"
+  instance_class          = "db.t2.micro"
   allocated_storage       = 20
   publicly_accessible     = true
   db_subnet_group_name    = aws_db_subnet_group.database_subnet_group.name
