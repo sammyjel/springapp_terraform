@@ -3,6 +3,6 @@
     SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
   run: |
     mvn sonar:sonar \
-      -Dsonar.projectKey=my-app \
+      -Dsonar.projectKey=sammyjel_springapp_terraform \
       -Dsonar.host.url=http://192.168.1.9:9000 \
       -Dsonar.login=$SONAR_TOKEN
